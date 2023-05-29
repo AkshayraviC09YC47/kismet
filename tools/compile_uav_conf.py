@@ -11,7 +11,7 @@ if len(sys.argv) < 1:
 print(sys.argv[1])
 
 with open(sys.argv[1], "r") as stream:
-    data_loaded = yaml.load(stream, Loader=yaml.FullLoader)
+    data_loaded = yaml.load(stream, Loader=yaml.SafeLoader)
 
 
 for e in data_loaded:
